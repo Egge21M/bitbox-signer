@@ -3,7 +3,6 @@ import * as bitbox from "bitbox-api";
 import { signMessage } from "./utils";
 
 const encoder = new TextEncoder();
-const decoder = new TextDecoder();
 
 function App() {
   const [device, setDevice] = useState<bitbox.PairedBitBox>();
@@ -60,8 +59,11 @@ function App() {
       <h1>BitBox Signer</h1>
       <p className="text-zinc-600 text-xs max-w-sm text-center mb-12 mt-4">
         This is an open source project built with 🧡 by Egge. You can find the
-        license <a>here</a>. There is no affiliation with BitBox Swiss or Swiss
-        Crypto
+        license{" "}
+        <a href="https://github.com/Egge21M/bitbox-signer/blob/main/LICENSE.md">
+          here
+        </a>
+        . There is no affiliation with BitBox Swiss or Swiss Crypto
       </p>
 
       {!device ? (
